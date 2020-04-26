@@ -1,6 +1,6 @@
-package com.badlogic.drop;
+package com.badlogic.droplets;
 
-import com.badlogic.drop.projectiles.Droplet;
+import com.badlogic.droplets.projectiles.Droplet;
 import com.badlogic.drophelpers.AssetLoader;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -214,8 +214,8 @@ public class GameScreen implements Screen {
 		}else{
 			batch.begin();
 
-			String levelText = "YOU LOSE. " + curLevel;
-			AssetLoader.regular.draw(batch, levelText, (screenWidth/2) - (levelText.length()) - CHAR_LENGTH, screenHeight - 10);
+			String levelText = "YOU LOSE. LVL: " + curLevel;
+			AssetLoader.regular.draw(batch, levelText, (screenWidth/2) - (levelText.length() * CHAR_LENGTH)/2 , screenHeight - 10);
 
 			batch.end();
 		}

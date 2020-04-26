@@ -1,4 +1,4 @@
-package com.badlogic.drop;
+package com.badlogic.droplets;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;

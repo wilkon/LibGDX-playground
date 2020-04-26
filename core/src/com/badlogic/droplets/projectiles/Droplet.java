@@ -1,4 +1,4 @@
-package com.badlogic.drop.projectiles;
+package com.badlogic.droplets.projectiles;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Rectangle;
