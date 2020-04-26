@@ -1,6 +1,6 @@
-package com.badlogic.droplets;
+package com.badlogic.droplets.mains;
 
-import com.badlogic.droplets.projectiles.Droplet;
+import com.badlogic.droplets.mains.projectiles.Droplet;
 import com.badlogic.drophelpers.AssetLoader;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;

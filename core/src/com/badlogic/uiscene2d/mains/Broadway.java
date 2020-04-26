@@ -1,4 +1,4 @@
-package com.badlogic.uiscene2d;
+package com.badlogic.uiscene2d.mains;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
@@ -14,7 +14,7 @@ public class Broadway extends ApplicationAdapter {
 
     @Override
     public void create(){
-        stage = new Stage(new ScreenViewport());
+        stage = new Stage(new ScreenViewport()); //showcase finals - Bellas up!
         Texture texture = new Texture(Gdx.files.internal("image.jpg"));
 
         //creating an image at location
@@ -28,7 +28,7 @@ public class Broadway extends ApplicationAdapter {
                                 // ^Height -
         // 2/3 of full height minus the height of our image.
 
-        stage.addActor(image); // the image is our personal Anna Kendrick
+        stage.addActor(image); // the image is our digitized Anna Kendrick
 
         //rotating image
         Image rotatedImage = new Image(texture);

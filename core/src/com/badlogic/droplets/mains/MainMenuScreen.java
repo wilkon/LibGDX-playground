@@ -1,4 +1,4 @@
-package com.badlogic.droplets;
+package com.badlogic.droplets.mains;
 
 import com.badlogic.drophelpers.AssetLoader;
 import com.badlogic.gdx.Gdx;

@@ -1,9 +1,8 @@
-package com.badlogic.droplets.desktop;
+package com.badlogic.droplets.mains.desktop;
 
-import com.badlogic.droplets.Droplets;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
-import com.badlogic.uiscene2d.Broadway;
+import com.badlogic.uiscene2d.mains.Broadway;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {
