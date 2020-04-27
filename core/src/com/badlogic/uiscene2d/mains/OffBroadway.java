@@ -14,14 +14,13 @@ public class OffBroadway extends ApplicationAdapter {
 
     @Override
     public void create(){
+        stage = new Stage(new ScreenViewport());
+
         //creating a tiled grid N x N
         int N = 8;
-
         createGrid(N);
     }
     private void createGrid(int N){
-
-        stage = new Stage(new ScreenViewport());
         Texture texture = new Texture(Gdx.files.internal("image.jpg"));
 
         //type of repetition - MirroedRepeat will mirror each to the next
