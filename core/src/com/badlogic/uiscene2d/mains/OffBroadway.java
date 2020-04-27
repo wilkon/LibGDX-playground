@@ -28,7 +28,8 @@ public class OffBroadway extends ApplicationAdapter {
 
         TextureRegion tiledRegion = new TextureRegion(texture);
         // how we split our region - in this case, N defines row/col count
-        tiledRegion.setRegion(0, 0, Gdx.graphics.getWidth() * N, Gdx.graphics.getHeight() * N);
+        tiledRegion.setRegion(0, 0, texture.getWidth() * N,
+                texture.getHeight() * N);
 
         //assigning our tiled region to tiledImage
         Image tiledImage = new Image(tiledRegion);
