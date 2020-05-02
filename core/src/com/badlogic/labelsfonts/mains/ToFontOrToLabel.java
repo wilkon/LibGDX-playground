@@ -8,10 +8,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
-import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.*;
+import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 
@@ -30,11 +30,9 @@ public class ToFontOrToLabel extends ApplicationAdapter {
         row_height = Gdx.graphics.getWidth() / 12;
         col_width = Gdx.graphics.getWidth() / 12;
         createGrid(help_guide);
-        addBitmapFont();
 
-//        addTrueType(); not working on desktop
-
-        addSkinFont();
+        addCustomMenuScreen();
+        Gdx.input.setInputProcessor(stage);
     }
 
     @Override
@@ -49,6 +47,31 @@ public class ToFontOrToLabel extends ApplicationAdapter {
     @Override
     public void dispose(){
 
+    }
+
+    public void addCustomMenuScreen(){
+        Table layout = new Table();
+        layout.setFillParent(true);
+        stage.addActor(layout);
+
+        Skin flatEarthSkin = new Skin(Gdx.files.internal("skin-flat/flat-earth-ui.json"));
+
+        TextButton playButton = new TextButton("Play", flatEarthSkin);
+        TextButton settingsButton = new TextButton("Settings", flatEarthSkin);
+        TextButton exitButton = new TextButton("Exit", flatEarthSkin);
+
+        layout.add(playButton).fillX().uniformX();
+        layout.row().pad(10, 0, 10, 0);
+        layout.add(settingsButton).fillX().uniform();
+        layout.row();
+        layout.add(exitButton).fillX().uniform();
+
+        exitButton.addListener(new ChangeListener(){
+            @Override
+            public void changed(ChangeEvent event, Actor actor){
+                Gdx.app.exit();
+            }
+        });
     }
 
     private void addSkinFont(){
